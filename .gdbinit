@@ -1,1 +1,8 @@
-/data/data/com.termux/files/home/.gdbinit
+#在ubuntu中配置该文件，直接在termux里配置不起作用                                                                                                        
+python
+import sys
+sys.path.insert(0, '/usr/share/gcc-10/python')
+from libstdcxx.v6.printers import register_libstdcxx_printers
+register_libstdcxx_printers (None)
+end
+set print pretty on
